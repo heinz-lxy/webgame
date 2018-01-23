@@ -1,0 +1,12 @@
+{
+	"imageJson": [
+	],
+	"textJson": [
+	],
+	"boxJson": [
+		{"x":0, "y":120, "width":370, "height":220},
+		{"x":474, "y":120, "width":370, "height":220},
+		{"x":0, "y":375, "width":370, "height":220},
+		{"x":474, "y":375, "width":370, "height":220}
+	]
+}

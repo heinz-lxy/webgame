@@ -1,0 +1,15 @@
+{
+	"imageJson": [
+		{"x":645, "y":208, "name":"sample"},
+		{"x":180, "y":296, "name":"l_box"},
+		{"x":73, "y":614, "name":"desk"}
+	],
+	"textJson": [
+		{"x":379, "y":139, "content":"数一数 算一算", "size":"35px", "color":"#36200b"},
+		{"x":267, "y":227, "content":"数一数一共有", "size":"30px", "color":"#424844"},
+		{"x":593, "y":227, "content":"个", "size":"30px", "color":"#424844"}
+	],
+	"boxJson": [
+		{"x": 457, "y": 220, "width":123, "height": 62}
+	]
+}

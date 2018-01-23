@@ -1,0 +1,11 @@
+{
+	"imageJson": [
+		
+	],
+	"textJson": [
+		{"x":530, "y":679, "content":"（个）", "size":"22px", "color":"#464643"}
+	],
+	"boxJson": [
+		{"x": 417, "y": 646, "width": 109, "height": 56}
+	]
+}

@@ -1,0 +1,20 @@
+{
+	"imageJson": [
+		{"x":76, "y":183, "name":"paper"}
+	],
+	"textJson": [
+		{"x":379, "y":121, "content":"想一想，填一填", "size":"30px", "color":"#464643"},
+		{"x":91, "y":220, "content":"××××年××月××日", "size":"22px", "color":"#464643"},
+		{"x":105, "y":433, "content":"=", "size":"30px", "color":"#464643"},
+		{"x":303, "y":433, "content":"+", "size":"30px", "color":"#464643"},
+		{"x":499, "y":433, "content":"+", "size":"30px", "color":"#464643"},
+		{"x":698, "y":433, "content":"+", "size":"30px", "color":"#464643"},
+		{"x":664, "y":622, "content":"××班级：××", "size":"18px", "color":"#464643"}
+	],
+	"boxJson": [
+		{"x": 146, "y": 418, "width":147, "height": 56},
+		{"x": 337, "y": 418, "width":147, "height": 56},
+		{"x": 537, "y": 418, "width":147, "height": 56},
+		{"x": 746, "y": 418, "width":147, "height": 56}
+	]
+}

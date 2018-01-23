@@ -1,0 +1,41 @@
+[
+	{
+		"imageJson": [
+			{"x":85, "y":85, "name":"bubble"},
+			{"x":150, "y":236, "name":"seperate_line"},
+			{"x":540, "y":195, "name":"puzzled_girl"},
+			{"x":74, "y":611, "name":"desk"}
+		],
+		"textJson": [
+			{"x":251, "y":150, "content":"小女孩收作业，班里", "size":"30px", "color":"#464643"},
+			{"x":183, "y":265, "content":"每组需要交", "size":"30px", "color":"#464643"},
+			{"x":490, "y":265, "content":"本?", "size":"30px", "color":"#464643"},
+			{"x":243, "y":337, "content":"还剩下", "size":"30px", "color":"#464643"},
+			{"x":490, "y":337, "content":"本？", "size":"30px", "color":"#464643"}
+		],
+		"boxJson": [
+			{"x": 369, "y": 258, "width": 115, "height": 61},
+			{"x": 382, "y": 326, "width": 69, "height": 61}
+		]
+	},
+	{
+		"imageJson": [
+			{"x":120, "y":100, "name":"bubble2"},
+			{"x":368, "y":295, "name":"symbol1"},
+			{"x":377, "y":460, "name":"symbol2"},
+			{"x":81, "y":405, "name":"puzzled_girl3"}
+		],
+		"textJson": [
+			{"x":457, "y":154, "content":"用竖式要怎么写呢？", "size":"30px", "color":"#464643"},
+			{"x":657, "y":255, "content":"每组能分到", "size":"20px", "color":"#464643"},
+			{"x":657, "y":509, "content":"还剩下？", "size":"20px", "color":"#464643"}
+		],
+		"boxJson": [
+			{"x": 520, "y": 220, "width":69, "height": 69},
+			{"x": 414, "y": 387, "width":69, "height": 69},
+			{"x": 520, "y": 387, "width":69, "height": 69},
+			{"x": 520, "y": 476, "width":69, "height": 69}
+		]
+	}
+
+]

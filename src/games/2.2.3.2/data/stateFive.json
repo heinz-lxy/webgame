@@ -1,0 +1,13 @@
+{
+	"imageJson": [
+		{"x":120, "y":100, "name":"bubble2"},
+		{"x":368, "y":295, "name":"symbol1"},
+		{"x":377, "y":460, "name":"symbol2"},
+		{"x":81, "y":405, "name":"puzzled_girl3"}
+	],
+	"textJson": [
+		{"x":457, "y":154, "content":"用竖式要怎么写呢？", "size":"30px", "color":"#464643"},
+		{"x":657, "y":255, "content":"每组能分到", "size":"20px", "color":"#464643"},
+		{"x":657, "y":509, "content":"还剩下？", "size":"20px", "color":"#464643"}
+	]
+}

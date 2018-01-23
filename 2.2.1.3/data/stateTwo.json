@@ -1,0 +1,18 @@
+{
+	"imageJson": [
+		{"x":81, "y":405, "name":"puzzled_girl3"},
+		{"x":304, "y":302, "name":"book1"},
+		{"x":68, "y":97, "name":"request"},
+		{"x":409, "y":418, "name":"symbol1"},
+		{"x":416, "y":585, "name":"symbol2"}
+	],
+	"textJson": [
+		{"x":145, "y":151, "content":"再做两题吧。", "size":"30px", "color":"#393939"}
+	],
+	"boxJson": [
+		{"x": 561, "y": 344, "width":69, "height": 69},
+		{"x": 454, "y": 508, "width":69, "height": 69},
+		{"x": 560, "y": 508, "width":69, "height": 69},
+		{"x": 560, "y": 597, "width":69, "height": 69}
+	]
+}

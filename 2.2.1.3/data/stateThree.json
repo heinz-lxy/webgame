@@ -1,0 +1,18 @@
+{
+	"imageJson": [
+		{"x":81, "y":405, "name":"puzzled_girl3"},
+		{"x":304, "y":302, "name":"book1"},
+		{"x":68, "y":97, "name":"request"}
+	],
+	"textJson": [
+		{"x":145, "y":151, "content":"填写出字母代表的数字，相乘的答案接近并小于右\n边的数。", "size":"30px", "color":"#393939"},
+		{"x":334, "y":346, "content":"1、", "size":"45px", "color":"#636363"},
+		{"x":334, "y":538, "content":"2、", "size":"45px", "color":"#636363"},
+		{"x":513, "y":429, "content":"M=", "size":"45px", "color":"#393939"},
+		{"x":513, "y":630, "content":"N=", "size":"45px", "color":"#393939"}
+	],
+	"boxJson": [
+		{"x": 600, "y": 418, "width":69, "height": 69},
+		{"x": 600, "y": 619, "width":69, "height": 69}
+	]
+}
