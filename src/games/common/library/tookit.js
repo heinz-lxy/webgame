@@ -37,41 +37,45 @@ export default{
 
 	/* Display */
 	image(game, imageJson, container){
-		if(!Array.isArray(imageJson)){
-			let temp = game.add.image(imageJson.x,imageJson.y,imageJson.name);
-			container && container.addChild(temp)
-			return temp;
-		}
-		let arr = [];
-		imageJson.forEach(image => {
-			let temp = game.add.image(image.x,image.y,image.name);
-			arr.push(temp);
-			container && container.addChild(temp);
-		});
-		return arr;
+	    return this.add(game, data => {
+	        return game.add.image(data.x,data.y,data.name);
+	    },imageJson, container) 
 	},
 	sprite(game, spriteJson, container){
-		if(!Array.isArray(spriteJson)){
-			let temp = game.add.sprite(spriteJson.x,spriteJson.y,spriteJson.name);
-			container && container.addChild(temp)
-			return temp;
-		}
-		let arr = [];
-		spriteJson.forEach(sprite => {
-			let temp = game.add.sprite(sprite.x,sprite.y,sprite.name);
-			arr.push(temp);
-			container && container.addChild(temp);
-		});
-		return arr;
+	    return this.add(game, data => {
+	        return game.add.sprite(data.x, data.y, data.name);
+	    },spriteJson, container) 
 	},
 	text(game, textJson, container){
-		if(!Array.isArray(textJson)){
-			textJson = [textJson];
-		}
-		textJson.forEach(text => {
-			let temp = game.add.text(text.x,text.y,text.content,{fill:text.color?text.color:'#464643',font:text.size?text.size:'30px'});
-		    container && container.addChild(temp)
-		});
+	    return this.add(game, data => {
+	        let temp;
+	        if(data.width){
+	            temp = game.add.text(data.x,data.y,data.content,{fill:data.color,font:data.font+''+data.size?data.size:'30px',boundsAlignH: "center",boundsAlignV: "middle"});
+	            temp.setTextBounds(0, 0, data.width, data.height);
+	        }else{
+	            temp = game.add.text(data.x,data.y,data.content,{fill:data.color?data.color:'#464643',font:data.font+''+data.size?data.size:'30px'});
+	        }
+	        return temp;
+	    },textJson, container) 
+	},
+	add(game, make, jsonData, container){
+	    if(!Array.isArray(jsonData)){
+	        let temp = make(jsonData);
+	        container && container.addChild(temp)
+	        return temp;
+	    }
+	    let arr = [];
+	    jsonData.forEach(data => {
+	        let temp = make(data);
+	        arr.push(temp);
+	        container && container.addChild(temp);
+	    });
+	    return arr;
+	},
+	button(game, button, container){
+		let temp = game.add.button(button.x,button.y,button.name,button.cb,undefined,1,0,1,0);
+		container && container.addChild(temp);
+		return temp;
 	},
 	evenText(game, textJson, container){ // 居中文本
 		let temp = game.add.text(textJson.x,textJson.y,textJson.content,{fill:textJson.color,font:textJson.size,boundsAlignH: "center",boundsAlignV: "middle"});
@@ -79,12 +83,12 @@ export default{
 		container && container.addChild(temp)
 	},
 	wrapper(game){
-		// let group = game.make.group();
 		return game.add.graphics(0,0); 
 	},
 
-	dynamic(create, cb){ //create dynamic element
+	dynamic(create, cb, container){ //create dynamic element
 		let elem = create();
+		container && container.addChild(elem);
 		this.bindClick(elem,cb);
 	},
 	bindClick(elem, cb){
@@ -98,6 +102,9 @@ export default{
 
 
 	/* Animation */
+	animation(create, cb){
+	    cb(create());
+	},
 	zoom(elem, h, v){
 		if(!v){ 
 			v = h; 
@@ -108,8 +115,9 @@ export default{
 		elem.width = width;
 		elem.height = height;
 	},
-	moveTo(game, elem, pos, time){
-		game.add.tween(elem).to( { x:pos.x, y: pos.y }, time, Phaser.Easing.Cubic.Out, true);
+	moveTo(game, elem, pos, time, cb){
+		let temp = game.add.tween(elem).to( pos, time, Phaser.Easing.Cubic.Out, true);
+		cb && temp.onComplete.addOnce(cb);
 	},
 	flicker(game, elem, time){
 		game.add.tween(elem).to( { alpha: [1,0] }, time, "Linear", true, 0, -1);

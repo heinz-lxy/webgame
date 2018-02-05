@@ -11,7 +11,7 @@ var gameId = JSON.parse(fsdir).id;
 let config = {
   entry: {
     "common/common": [
-      "./src/common/publicGame/index.js",
+      "./src/common/Game/index.js",
     ]
   },
   output: {
@@ -88,6 +88,7 @@ let config = {
     new webpack.HotModuleReplacementPlugin(),
   ],
   resolve: {
+    modules: [path.resolve(__dirname, "src"), "node_modules"],
     alias: {
       "Xsj": path.join(__dirname, "./src/games/common/modules/index.js"),
       "tookit": path.join(__dirname, "./src/games/common/library/tookit.js")

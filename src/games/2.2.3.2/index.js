@@ -1,18 +1,11 @@
-/**
- * 游戏工程主文件
- */
-import game from './xsjMain.js'; 
-import publicGame from '../../common/publicGame'; //phaser封装
+import Game from '../../common/Game'; //phaser封装
+
+import resources from './resources.js';
+import states from "./game/index.js"; 
 import vars from './globalData.js'; 
-import resources from './resources.js'; 
 
-var gameId = '2.2.3.2';
+const game = new Game(resources, states);
+vars.game = game.game;
 
-class index extends publicGame { //引入phaser封装
-  constructor() {
-    super(game, gameId, resources); 
-    vars.game = this.config.game;
-  }
-}
 
-new index();
+

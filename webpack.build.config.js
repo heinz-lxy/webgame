@@ -17,7 +17,7 @@ const gameId = JSON.parse(fsdir).id;
 let config = {
   entry: {
     "common/common": [
-          "./src/common/publicGame/index.js"
+          "./src/common/Game/index.js"
     ]
 
   },

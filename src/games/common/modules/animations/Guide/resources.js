@@ -1,6 +1,6 @@
 export default{
 	load(game){
-		const path = '../common/modules/animations/CountDown/';
+		const path = '../common/modules/animations/Guide/';
 
 		game.load.image('pre_box', path+'dialogBox.png');
 		game.load.image('pauseBg', path+'pauseBg.png');
